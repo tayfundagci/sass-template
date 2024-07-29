@@ -1,0 +1,40 @@
+.home {
+  @extend %align-center;
+  height: 100vh;
+
+  .container {
+    @extend %align-center;
+    flex-direction: column;
+
+    .textOne {
+      font-size: $largeFont;
+      margin-bottom: 20px;
+    }
+
+    .textTwo {
+      font-size: $mediumFont;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @include mobileSmall {
+    background-color: $colorone;
+  }
+
+  @include mobileLarge {
+    background-color: $colortwo;
+    color: $colorone;
+  }
+
+  @include tablet {
+    background-color: $colorthree;
+    color: $colortwo;
+  }
+
+  @include laptop {
+    background-color: $colorfour;
+  }
+
+}
